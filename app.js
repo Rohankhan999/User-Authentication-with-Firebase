@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 const firebaseConfig = {
     apiKey: "AIzaSyAy2sdXZBATUG899y7KZpZsnOluIckd_Jc",
     authDomain: "login-signup-999.firebaseapp.com",
@@ -41,13 +41,16 @@ const firebaseConfig = {
         })
         .catch((error) => {
             const errorMessage = "Something went wrong. Please try again.";
-            console.log("Error -->", errorMessage);
+            const errorCode = error.code;
+            console.log("Error -->", errorMessage,errorCode );
             Swal.fire({
                 icon: "error",
                 title: "Sign Up Failed",
-                text: errorMessage,
+                text: "Password Must Contain Special Character",
             });
         });
 }
 
 document.getElementById("submit").onclick = signup;
+
+
