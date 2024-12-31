@@ -48,7 +48,7 @@ signInWithEmailAndPassword(auth, email, password)
     Swal.fire({
         icon: "error",
         title: "Sign Up Failed",
-        text: errorMessage,
+        text: "Invalid Passord or Email",
     });
   });
 }
