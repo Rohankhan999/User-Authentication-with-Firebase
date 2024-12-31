@@ -2,6 +2,7 @@
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    background-color: black;
 }
 
 .container {
@@ -51,7 +52,7 @@ img {
 
 section {
     width: 50%;
-    height: 550px;
+    height: 450px;
     background: rgba(74, 64, 64, 0.2);
     border-radius: 25px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -69,4 +70,36 @@ h2{
     padding-top: 30px;
     font-size: 36px;
     font-weight: 800;
+}
+input{
+    background-color: antiquewhite;
+    border: none;
+    width:240px;
+    height: 40px;
+    margin-left: 50px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+::placeholder{
+    padding: 20px;
+    color: black;
+}
+.info{
+    display: flex;
+    flex-wrap: wrap;
+}
+input:focus{
+    transition: 2s;
+    background-color: rgb(155, 152, 152);
+    color: antiquewhite;
+}
+button{
+    margin-top: 50px;
+    margin-left:190px;
+    width: 250px;
+    height: 40px;
+    background-color: rgb(210, 205, 198);
+    border: none;
+    font-size: 16px;
+ border-radius: 10px;
 }
